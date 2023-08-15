@@ -1,4 +1,4 @@
-package week1.day1;
+package mandatoryHomework.week1.day1;
 
 public class Dsa {
 

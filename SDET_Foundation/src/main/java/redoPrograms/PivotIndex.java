@@ -31,24 +31,26 @@ public class PivotIndex {
 	}
 	
 	public int Pivot(int[]arr) {		
-		int totalsum = 0;
+		int totalsum = 0;  // O [1]
 		for(int i = 0; i<arr.length; i++){
-			totalsum += arr[i];
+			totalsum += arr[i]; // o[N]
 
 		}
-		int leftsum =0;
-		for(int j= 0; j<arr.length; j++){
+		int leftsum =0; //O[1]
+		for(int j= 0; j<arr.length; j++){ // O[N]
 			 
-			if(leftsum==totalsum-arr[j]-leftsum){
+			if(leftsum==totalsum-arr[j]-leftsum){ //O[1]
 				return j;
 			}
 			
-			leftsum+=arr[j];
+			leftsum+=arr[j]; //o[1]
 
 		}
 		
 		return -1;
 	
+	//	O[1] + o[1]+ o[1]  o[N] + o[N]
+		
 		
 	
 	}	

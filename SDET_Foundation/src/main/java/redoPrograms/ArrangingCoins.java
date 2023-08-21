@@ -23,16 +23,16 @@ public class ArrangingCoins {
 	
 	
 	public int Steps(int n) {
-		int coins=n;
-		for(int steps=1; steps<=n; steps++){
+		int coins=n; //o 1
+		for(int steps=1; steps<=n; steps++){ //o n
 			coins-=steps;
-		if(coins<=0){
-		return steps;
+		if(coins<=0){ // o 1
+		return steps; // o 1
 		}
 		
 
 		}
-		return 0;
+		return 0; // o 1
 		
 
 	}

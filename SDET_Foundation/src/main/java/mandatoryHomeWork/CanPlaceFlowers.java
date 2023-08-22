@@ -1,4 +1,4 @@
-package mandatoryHomework.week1.day1;
+package mandatoryHomeWork;
 
 import org.junit.Assert;
 
@@ -40,17 +40,25 @@ public class CanPlaceFlowers {
 		Assert.assertEquals(true,PlaceFlowers(new int[] {1,0,0,0,0}, 2));
 	}
 	public boolean PlaceFlowers(int[] flowerbed, int n) {
-
-	for(int i=0; i<flowerbed.length; i=i+2){ //O[N]
-		if(flowerbed[i]!=1) {
-			flowerbed[i] = 1;
-			n= n -1;
+		int count=0;
+		for (int i = 0; i < flowerbed.length; i++) {
+			if (flowerbed[i]-1==0&&flowerbed[i]+1==0) {
+				count++;
+				
+			}
 		}
-		if (n==0) {
-			break;
-		}	
-	}
-		return n==0;
+		return count==n;
+
+//	for(int i=0; i<flowerbed.length; i=i+2){ //O[N]
+//		if(flowerbed[i]!=1) {
+//			flowerbed[i] = 1;
+//			n= n -1;
+//		}
+//		if (n==0) {
+//			break;
+//		}	
+//	}
+//		return n==0;
 
 }
 }

@@ -18,6 +18,14 @@ Example 2:
 Input: nums = [1,1]
 Output: [1,2]
 
+
+
+
+
+
+
+
+
 Test Data:
 {1,2,2,4}
 {2,2}

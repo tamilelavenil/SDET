@@ -8,27 +8,26 @@ public class CountingValleys {
  * 4)return the valley count
  */
 	public static void main(String[] args) {
-		String a = "UDDDUDUU";
+//		String a = "UDDDUDUU";
+		String a = "DDUUUUDD";
+
 		int sum = 0;
-		String check ="";
-		int len = check.length();
+		int Valleycount=0;
 		for(int i = 0; i<a.length();i++) {
-			char step1 = a.charAt(i);
-			char step2 = a.charAt(i+1);
-				if (step1=='D') {
+				if (a.charAt(i)=='D') {
 					sum-=1;
-					if (step1=='U'&&step2=='D') {
-						
-					}
+					
+					
 				}
 				else {
 					sum+=1;
+					if (sum==0) {
+						Valleycount++;
+					}
 				}
 			
-		}
-		System.out.println(sum);		
-		System.out.println(check);
-		System.out.println(len);
+		}	
+		System.out.println(Valleycount);
 	}
 
 }

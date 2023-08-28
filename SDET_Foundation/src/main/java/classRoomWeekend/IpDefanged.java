@@ -3,12 +3,11 @@ package classRoomWeekend;
 import java.util.Arrays;
 
 public class IpDefanged {
-//	Given a valid IP address, return a defanged version of that IP address.
-//			A defanged IP address replaces every period "." with "[.]".
-//			Do Not Use the replaceAll()
-//			Example 1:
-//			Input: address = "1.1.1.1"
-//			Output: "1[.]1[.]1[.]1"
+	/*
+	 * Given a valid IP address, return a defanged version of that IP address. A
+	 * defanged IP address replaces every period "." with "[.]". Do Not Use the
+	 * replaceAll() Example 1: Input: address = "1.1.1.1" Output: "1[.]1[.]1[.]1"
+	 */
 	public static void main(String[] args) {
 	String input = "1.1.1.1";
 	String[]inputarr = input.split("");

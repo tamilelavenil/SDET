@@ -1,14 +1,17 @@
 package seleniumMarathonSalesforce.individuals;
 
 import java.time.Duration;
-
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.junit.Assert;
 
-public class TC001_CreateIndividuals_SalesForce {
+public class TC005_VerifyIndividuals_SortName {
 
 	public static void main(String[] args) throws InterruptedException {
 
@@ -39,34 +42,25 @@ public class TC001_CreateIndividuals_SalesForce {
 		
 		 JavascriptExecutor j = (JavascriptExecutor) driver;
 	     j.executeScript("arguments[0].click();", individuals);
-	     //clicking the Individuals tab
-	     
-	     driver.findElement(By.xpath("//a[contains(@title,'Individuals')]/following::*[name()='svg' and @data-key='chevrondown']")).click();
-	     
-	     //clicking the create new inviduals
-	     
-	     
-	     driver.findElement(By.xpath("//div[@title='New']")).click();
-//	   
-//	     WebElement newindividual = driver.findElement(By.xpath("//span[text()='New Individual']"));
-//	     Thread.sleep(5000);
-//	     j.executeScript("arguments[0].click();", newindividual);
-	     
-	     //send last name
-	     driver.findElement(By.xpath("//input[contains(@class,'lastName')]")).sendKeys("Catherine");
-	     
-	     //click on save button
-	     driver.findElement(By.xpath("//button[@title='Save']")).click();
-	     
-	     //get the last name and Verify
+	     //name web element
+	     WebElement name = driver.findElement(By.xpath("//table[@data-aura-class='uiVirtualDataTable']//span[text()='Name']"));
+	     //clicking the Name Button to sort the names
+	     j.executeScript("arguments[0].click();", name);
+	    //getting the name list in web table and storing in a list
 	     Thread.sleep(5000);
-	    String lastname =  driver.findElement(By.xpath("(//span[text()='Kumar'])[2]")).getText();
-	    
-	    	System.out.println(lastname.equals("Catherine"));
+	     List<WebElement> findElements = driver.findElements(By.xpath("//table[@data-aura-class='uiVirtualDataTable']/tbody/tr/th"));
+	     List<String> list=new ArrayList<String>();
+	     for (WebElement ele : findElements) {
+				String text = ele.getText();
+				list.add(text);
+			}
+	     List<String> sortedList = new ArrayList<String> (list);
+	     Collections.sort(sortedList);
+	     System.out.println(list +" "+sortedList);
 	     
-	   
-			
+	     Assert.assertEquals(list,sortedList);
+	     
+	     //driver.findElement(By.xpath("//a[contains(@title,'Individuals')]/following::*[name()='svg' and @data-key='chevrondown']")).click();
 	}
-	
 
 }

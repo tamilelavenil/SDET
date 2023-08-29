@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
-public class TC001_CreateIndividuals_SalesForce {
+public class TC004_CreateIndividuals_Without_Mandatory_SalesForce {
 
 	public static void main(String[] args) throws InterruptedException {
 
@@ -45,24 +45,29 @@ public class TC001_CreateIndividuals_SalesForce {
 	     
 	     //clicking the create new inviduals
 	     
+	   
+	     WebElement newindividual = driver.findElement(By.xpath("//span[text()='New Individual']"));
+	     Thread.sleep(5000);
+	     j.executeScript("arguments[0].click();", newindividual);
 	     
-	     driver.findElement(By.xpath("//div[@title='New']")).click();
-//	   
-//	     WebElement newindividual = driver.findElement(By.xpath("//span[text()='New Individual']"));
-//	     Thread.sleep(5000);
-//	     j.executeScript("arguments[0].click();", newindividual);
+	     //selecting salutation
 	     
-	     //send last name
-	     driver.findElement(By.xpath("//input[contains(@class,'lastName')]")).sendKeys("Catherine");
+	     driver.findElement(By.xpath("//span[text()='Salutation']/../..//a")).click();
 	     
+	     driver.findElement(By.xpath("//a[@title='Mr.']")).click();
+	     
+	     //sending firstname
+	     
+	     driver.findElement(By.xpath("//input[contains(@class,'firstName')]")).sendKeys("Ganesh");
+	   
 	     //click on save button
 	     driver.findElement(By.xpath("//button[@title='Save']")).click();
 	     
-	     //get the last name and Verify
+	     //Validate error message
 	     Thread.sleep(5000);
-	    String lastname =  driver.findElement(By.xpath("(//span[text()='Kumar'])[2]")).getText();
+	    String error =  driver.findElement(By.xpath("//ul[@class='errorsList']/li[text()='These required fields must be completed: Last Name']")).getText();
 	    
-	    	System.out.println(lastname.equals("Catherine"));
+	    System.out.println(error.equals("These required fields must be completed: Last Name"));
 	     
 	   
 			

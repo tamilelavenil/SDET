@@ -48,24 +48,29 @@ public class Day2 {
 		
 		
 
-		WebElement element = driver.findElement(By.xpath("//p[text()='Dashboards']"));
+		WebElement dash = driver.findElement(By.xpath("//p[text()='Dashboards']"));
 		
 		 JavascriptExecutor j = (JavascriptExecutor) driver;
-	     j.executeScript("arguments[0].click();", element);
+	     j.executeScript("arguments[0].click();", dash);
 	     
 	     driver.findElement(By.xpath("//div[text()='New Dashboard']")).click();
 	     
-	    Thread.sleep(5);
-		driver.findElement(By.xpath("//input[@id='dashboardNameInput']")).sendKeys("Salesforce Automation by Tamil Elavenil");
-		
-		driver.findElement(By.xpath("//button[@id='submitBtn']")).click();
-		
-		driver.findElement(By.xpath("//button[text()='Save']")).click();
-		
-		
-		
-		
-
+	     WebElement iframe = driver.findElement(By.xpath("//iframe[@title='dashboard']"));
+	     
+	     driver.switchTo().frame(iframe);
+	    
+	     driver.findElement(By.xpath("//label[contains(@for,'NameInput')]/following::input[@id='dashboardNameInput']")).sendKeys("Salesforce Automation by Tamil Elavenil");
+	    
+	    //click create
+	    
+	    driver.findElement(By.xpath("//button[@id='submitBtn']")).click();
+	    
+	    //click on save
+	    
+	    driver.findElement(By.xpath("//button[text()='Save']")).click();
+	  
+	    
+	    driver.switchTo().defaultContent();
 	}
 
 }

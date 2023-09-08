@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="mocking.CreateStub">
+      <class name="restAssured_ReqRes.Get_Call">
         <methods>
-          <include name="create"/>
+          <include name="Get"/>
         </methods>
-      </class> <!-- mocking.CreateStub -->
+      </class> <!-- restAssured_ReqRes.Get_Call -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

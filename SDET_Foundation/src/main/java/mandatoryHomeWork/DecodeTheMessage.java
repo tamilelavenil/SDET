@@ -24,24 +24,22 @@ public class DecodeTheMessage {
 	public static void main(String[] args) {
 		String key = "the quick brown fox jumps over the lazy dog", message = "vkbs bs t suepuv";
 
-		key = key.replaceAll(" ", "");
+		key = key.replaceAll(" ", ""); //removing spaces
 		
 		List<Character> keyList = new ArrayList<>();
 		
-		for (int i = 0; i < key.length(); i++) {
-			if (!(keyList.contains(key.charAt(i)))) {
-				keyList.add(key.charAt(i));
-			}
-		}
-		
-		System.out.println(keyList);
-
 		char[] messageArray = message.toCharArray();
 
 		char[] alphaArray = new char[26];
 
 		int abc = 97;
-		
+		//adding key string to list without spaces and duplicates
+		for (int i = 0; i < key.length(); i++) {
+			if (!(keyList.contains(key.charAt(i)))) {
+				keyList.add(key.charAt(i));
+			}
+		}
+		//adding abcd to array
 		for(int i=0; i<alphaArray.length; i++){
 
 		alphaArray[i]=(char) abc;
@@ -50,24 +48,23 @@ public class DecodeTheMessage {
 		}
 		
 		StringBuilder build = new StringBuilder();
-		
+		//comparing message and key array
 		for(int i=0; i<messageArray.length; i++){
-		
+			
 			if(messageArray[i]==' '){
 				build.append(" ");
 			}
-			else {
-				for(int j=0; j<keyList.size(); j++) {
+			
+			for(int j=0; j<keyList.size(); j++) {
+				
 				if(messageArray[i]==keyList.get(j)) {
 					build.append(alphaArray[j]);
 				}
-				}
 			}
-			
 		}
 		
 		System.out.println(build.toString());
-
-	}
-
+		
+		}
 }
+

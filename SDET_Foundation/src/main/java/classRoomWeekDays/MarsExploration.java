@@ -1,4 +1,4 @@
-package mandatoryHomeWork;
+package classRoomWeekDays;
 
 import java.util.Arrays;
 

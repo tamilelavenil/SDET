@@ -42,7 +42,7 @@ public class Create_New_Story {
 		System.out.println(title.equals("Automation Story Created By Tamil"));
 		
 		
-		
+		driver.quit();
 		
 		
 		

@@ -2,8 +2,10 @@ package classRoomWeekDays;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 
 public class ListOfPanagram {
 	/*
@@ -14,27 +16,21 @@ public class ListOfPanagram {
 	public static void main(String[] args) {
 		
 		List<String> list = new ArrayList<String>();
-
 		list.add("We promptly judged antique ivory buckles for the next prize");
 		list.add("We promptly judged antique ivory buckles for the prize");
 		list.add("abcdefgh");
-		list.add("qwertyuiopasdfghjklzxcvbnm");
-		System.out.println(list);
+		list.add("abcdefghijklmnopqrstuvwxyz");
 		StringBuilder build = new StringBuilder();
 		for (String string : list) {
+			Set<String> set = new HashSet<String> ();
 			char[] ana = string.toCharArray();
-			Arrays.sort(ana);
-			System.out.println(Arrays.toString(ana));
-			int count = 0;
-			for (int i = 1; i < ana.length; i++) {
-				
-					if (ana[i] != ana[i-1]) {
-						count+=1;
-						System.out.println(count);
-					}
-				
+			for (int i = 0; i < ana.length; i++) {
+				char alpha = Character.toLowerCase(ana[i]);
+				if (alpha>='a' && alpha<='z') {
+					set.add(Character.toString(alpha));
+				}
 			}
-			if (count == 26) {
+			if (set.size() == 26) {
 				build.append("1");
 			} else {
 				build.append("0");

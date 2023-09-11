@@ -45,7 +45,7 @@ public class Create_New_Story {
 		Assert.assertEquals("Automation Story Created By Tamil", driver.findElement(By.xpath("//span[contains(text(),'Automation Story Created By Tamil')]")).getText());
 		
 		
-		
+		driver.quit();
 		
 		
 		

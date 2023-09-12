@@ -1,5 +1,7 @@
 package mandatoryHomeWork;
 
+import java.util.Arrays;
+
 public class NumberOfLinesToWriteString {
 	/*
 	 * https://leetcode.com/problems/number-of-lines-to-write-string/description/
@@ -31,6 +33,8 @@ public class NumberOfLinesToWriteString {
 
 			output[0] = lineCount;
 			output[1] = lineWidth;
+			
+			System.out.println(Arrays.toString(output));
 
 	}
 }

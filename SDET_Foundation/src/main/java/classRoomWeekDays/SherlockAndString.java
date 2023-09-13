@@ -19,15 +19,20 @@ public class SherlockAndString {
 	 * 6)if all the values are identical in list return yes else no
 	 * 
 	 */	public static void main(String[] args) {
-		
-		 String s = "xxxaabbccrry";
+		 //adding one character { to avoid index exception and iterate until last value of alphabet
+		 String s = "aabbcd"+"{";
+		 
+		 // if input length is 1 directly return yes
+		 if (s.length()==1) System.out.println("YES");
 		 
 		 char[] charArray = s.toCharArray();
-		 int count=0;
+		 
 		 Arrays.sort(charArray);
+		 
 		 List<Integer> countList = new ArrayList<Integer> ();
-		 System.out.println(Arrays.toString(charArray));
-		 //iterate the array and check for each alpha count
+
+		 int count=0;
+		 //iterate the array and check for each alpha count and add in a list
 		 for(int i=0; i<charArray.length-1; i++) {
 		
 			 if (charArray[i]==charArray[i+1]||charArray[i]!=charArray[i+1]||charArray[i+1]!=charArray[i]) {
@@ -38,38 +43,36 @@ public class SherlockAndString {
 				 count=0;
 			} 
 		 }
-		 //getting max value in list
-		 int maxValueInList = Collections.max(countList);
 		 
-		 //get index of max value
-		 int maxIndex = 0;
-		 for (int i = 0; i < countList.size(); i++) {
-			if (countList.get(i)==maxValueInList) {
-				maxIndex = i;
-			}
+		 //iterate through list and add it in array [coverting list to array]
+		 int[] array = new int[countList.size()];
+		 int ix = 0;
+		 for (int value : countList) {
+			array[ix]=value;
+			ix++;
 		}
-		 //remove the target element
-		// countList.remove(maxIndex);
-		 //and add the new value in the same place
-		// countList.add(maxIndex, maxValueInList-1);
+		 Arrays.sort(array);
 		 
-		 //iterate through the list and check if duplicates
-		 boolean check = true;
-		 for (int j = 0; j < countList.size()-1; j++) {
-			if (countList.get(j)!=countList.get(j+1)) {
-				check = false;
-				break;
+		 //iterate through the array and check for conditions
+		 boolean check = false;
+		 int len = array.length-1;
+		 for (int j = 0; j < array.length; j++) {
+			 //first and last frequence are same
+			 if (array[0]==array[len]) {
+				 check = true;
 			}
-			else {
+			 //if first =1 and second = last - freq of 1 char is 1
+			 else if (array[0]==1 && array[1]==array[len]) {
+				 check = true;
+			 }
+			 
+			 //44445 first = second , second = secondLast , first = last -1
+			else if(array[0]==array[1]&&array[1]==array[len-1]&&array[0]==array[len]-1){
 				check = true;
 			}
 		}
-		 System.out.println(countList);
-		 
-		 System.out.println(maxValueInList);
-		 
-		 System.out.println(maxIndex);
-		// System.out.println(check);
+
+		 //return YES or NO based on true or false
 		 if (check==true) System.out.println("YES");
 		 else System.out.println("NO");
 	}

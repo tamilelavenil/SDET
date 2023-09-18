@@ -1,4 +1,4 @@
-package classRoomWeek1TwoPointer;
+package classRoomWeekEnd1_TwoPointer;
 
 import java.util.Arrays;
 

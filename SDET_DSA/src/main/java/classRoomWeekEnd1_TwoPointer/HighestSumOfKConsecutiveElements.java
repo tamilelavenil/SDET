@@ -1,4 +1,4 @@
-package classRoomWeek1TwoPointer;
+package classRoomWeekEnd1_TwoPointer;
 
 public class HighestSumOfKConsecutiveElements {
 	/* input array = {1,5,2,3,7,1}

@@ -1,4 +1,4 @@
-package classRoomWeek1TwoPointer;
+package classRoomWeekEnd1_TwoPointer;
 
 import java.util.Arrays;
 
@@ -18,7 +18,7 @@ public class SortedArray {
 		int ind1 = 0;
 		int ind2 = nums.length-1;
 		int sum=0;
-		while(sum!=target) {
+		while(ind1<ind2) {
 			sum = nums[ind1]+nums[ind2];
 			if (sum>target) {
 				ind2--;
@@ -30,6 +30,7 @@ public class SortedArray {
 			if (sum==target) {
 			out[0]=ind1;
 			out[1]=ind2;
+			break;
 		}
 			
 		}

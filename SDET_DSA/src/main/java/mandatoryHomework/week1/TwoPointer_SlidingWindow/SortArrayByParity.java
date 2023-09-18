@@ -1,4 +1,4 @@
-package mandatoryHomework.week1.day1;
+package mandatoryHomework.week1.TwoPointer_SlidingWindow;
 
 import java.util.Arrays;
 

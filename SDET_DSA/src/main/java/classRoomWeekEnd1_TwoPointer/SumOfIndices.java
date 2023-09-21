@@ -2,7 +2,7 @@ package classRoomWeekEnd1_TwoPointer;
 
 import java.util.Arrays;
 
-public class SortedArray {
+public class SumOfIndices {
 //	Given a sorted array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
 //			Input: nums = [2,3,5,7], target = 9
 //			Output: [0,3]

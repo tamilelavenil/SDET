@@ -10,7 +10,7 @@ public class ReverseListWithoutInbuiltFunction {
 	 * 4)left++ right --;
 	 * */
 	public static void main(String[] args) {
-		List<Integer> list = Arrays.asList(1,2,3,4,5);
+		List<Integer> list = Arrays.asList(1,2,3,4,5,6);
 		int l =0 , r =list.size()-1;		
 		
 		while(l<r) {

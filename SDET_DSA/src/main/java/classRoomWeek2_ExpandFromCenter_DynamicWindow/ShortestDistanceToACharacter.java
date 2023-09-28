@@ -30,7 +30,7 @@ public class ShortestDistanceToACharacter {
 				output[i] = i - pos;
 			}
 		 }
-		 System.out.println(Arrays.toString(output));
+	//	 System.out.println(Arrays.toString(output));
 		 for (int i = output.length-1; i >=0; i--) {
 			 
 				if (s.charAt(i)!=c) {

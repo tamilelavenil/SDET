@@ -13,7 +13,7 @@ public class FindAllAnagramsInAString {
 	 * Input: s = "cbaebabacd", p = "abc"
 		Output: [0,6]
 		
-		1)Iterate throught the string and check for p window size
+		1)Iterate through the string and check for p window size
 		2)whether p values are present in the string if present
 		3)update the left pointer index to out list
 		4)move left to next index and make right =left and again move to p window
@@ -57,14 +57,14 @@ public class FindAllAnagramsInAString {
 		list.add(left);
 		left++;
 		right=left;
-		sarr = new int[26];
+		
 		}
 		
 		else {
 		
 		left++;
 		right=left;
-		sarr = new int[26];
+		
 		}
 		}
 		

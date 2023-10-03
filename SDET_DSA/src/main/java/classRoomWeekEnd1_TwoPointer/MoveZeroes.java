@@ -28,12 +28,14 @@ public class MoveZeroes {
 				int temp = nums[index1];
 				nums[index1]=nums[index2];
 				nums[index2]=temp;
+				System.out.println(Arrays.toString(nums));
 			}
 			else if(nums[index1]==nums[index2]) {
 				index2++;
 				int temp1 = nums[index1];
 				nums[index1]=nums[index2];
 				nums[index2]=temp1;
+				System.out.println(Arrays.toString(nums));
 			}
 			index1++;
 			index2++;

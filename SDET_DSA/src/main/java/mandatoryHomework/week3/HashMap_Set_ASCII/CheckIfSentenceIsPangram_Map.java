@@ -8,7 +8,7 @@ import java.util.Map;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class CheckIfSentenceIsPangram {
+public class CheckIfSentenceIsPangram_Map {
 
 	@Test
 	public void Test1() {

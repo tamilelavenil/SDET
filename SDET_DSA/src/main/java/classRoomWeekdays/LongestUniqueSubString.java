@@ -3,7 +3,7 @@ package classRoomWeekdays;
 import java.util.HashSet;
 import java.util.Set;
 
-public class Longest {
+public class LongestUniqueSubString {
 
 	public static void main(String[] args) {
 		String s = "abcabcbb";

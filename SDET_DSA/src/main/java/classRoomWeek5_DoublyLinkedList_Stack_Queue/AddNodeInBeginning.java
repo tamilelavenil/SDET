@@ -1,4 +1,4 @@
-package classRoomWeek5_DoublyLinkedList;
+package classRoomWeek5_DoublyLinkedList_Stack_Queue;
 
 public class AddNodeInBeginning {
 

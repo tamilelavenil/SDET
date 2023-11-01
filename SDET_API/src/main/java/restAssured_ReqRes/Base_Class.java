@@ -9,7 +9,7 @@ public class Base_Class {
 	public static String id;
 	@BeforeMethod
 	public void Base() {
-		RestAssured.baseURI = "https://reqres.in/";
+		RestAssured.baseURI = "https://covid-19.dataflowkit.com/";
 		RestAssured.authentication = RestAssured.preemptive().basic("", ""); 
 
 	}

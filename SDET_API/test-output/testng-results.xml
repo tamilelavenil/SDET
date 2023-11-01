@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-09T22:45:30 IST" name="Default suite" finished-at="2023-09-09T22:45:34 IST" duration-ms="4312">
+  <suite started-at="2023-11-01T19:32:40 IST" name="Default suite" finished-at="2023-11-01T19:32:44 IST" duration-ms="4758">
     <groups>
     </groups>
-    <test started-at="2023-09-09T22:45:30 IST" name="Default test" finished-at="2023-09-09T22:45:34 IST" duration-ms="4312">
-      <class name="RestAssured_RestFull_Booker.CreateBooking">
-        <test-method signature="getId()[pri:0, instance:RestAssured_RestFull_Booker.CreateBooking@206a70ef]" started-at="2023-09-09T22:45:30 IST" name="getId" finished-at="2023-09-09T22:45:34 IST" duration-ms="4238" status="PASS">
+    <test started-at="2023-11-01T19:32:40 IST" name="Default test" finished-at="2023-11-01T19:32:44 IST" duration-ms="4758">
+      <class name="restAssured_ReqRes.Get_Call">
+        <test-method signature="Get()[pri:0, instance:restAssured_ReqRes.Get_Call@206a70ef]" started-at="2023-11-01T19:32:40 IST" name="Get" finished-at="2023-11-01T19:32:44 IST" duration-ms="4662" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getId -->
-      </class> <!-- RestAssured_RestFull_Booker.CreateBooking -->
+        </test-method> <!-- Get -->
+      </class> <!-- restAssured_ReqRes.Get_Call -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

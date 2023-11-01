@@ -9,7 +9,7 @@ public class Get_Call {
 	@Test
 	public void Get() {
 		//RestAssured.baseURI = "https://reqres.in/api/users?page=2";
-		Response response = RestAssured.given().contentType("application/json").get("https://reqres.in/api/users?page=2");
+		Response response = RestAssured.given().contentType("application/json").get("https://covid-19.dataflowkit.com/v1");
 		response.then().assertThat().statusCode(200);
 		response.prettyPrint();
 	}

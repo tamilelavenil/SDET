@@ -34,5 +34,8 @@ public class Create_Issue extends Base_Class	{
 	//	response.then().assertThat().body("key",Matchers.equalTo("TES-2826"));
 		id= response.jsonPath().get("id");
 		System.out.println(id);
+		
+		
+		
 		}
 }

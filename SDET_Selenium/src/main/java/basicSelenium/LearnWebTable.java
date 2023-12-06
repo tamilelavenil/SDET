@@ -1,5 +1,6 @@
 package basicSelenium;
 import java.time.Duration;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -19,6 +20,7 @@ public class LearnWebTable {
 		System.out.println(rowvalue);
 		// findElements-more one value
 		// findelements- List<webelement>
+		//List<Integer> list = new ArrayList();
 		List<WebElement> allrow = driver
 				.findElements(By.xpath("//div[@class='ui-datatable-scrollable-body']/table/tbody/tr/td[1]"));
 		int row = allrow.size();
@@ -37,5 +39,9 @@ public class LearnWebTable {
 				System.out.println(text);
 			}
 		}
+		
+		driver.quit();
+		
+		
 	}
 }

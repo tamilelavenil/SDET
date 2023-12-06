@@ -13,8 +13,7 @@ public class Base_Class {
 				+ "vhfzSTapOBEUGx0ZAdIbWfM5tjeU8rFw7Rh72pbanmBdYhtysnC3yH89HMn-lXz9PTGKVKtWFV2vp6GyZ_75P27LqLCAbHxqOjYds1SNn5oFZQFDi3ufeUI3cJwdCy20=5543D93F"); 
 	
 	
-	
-	
+
 	
 	
 	}
